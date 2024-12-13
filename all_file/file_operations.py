@@ -12,7 +12,7 @@ def get_books():
 
 def save_books(books):
     with open(BOOKS_FILE, "w") as file:
-        json.dump(books, file)
+        json.dump(books, file, indent=4)  # Added indent=4 for formatting
 
 def get_lend_records():
     try:
@@ -23,4 +23,4 @@ def get_lend_records():
 
 def save_lend_records(lend_records):
     with open(LEND_RECORDS_FILE, "w") as file:
-        json.dump(lend_records, file)
+        json.dump(lend_records, file, indent=4)  # Added indent=4 for formatting
